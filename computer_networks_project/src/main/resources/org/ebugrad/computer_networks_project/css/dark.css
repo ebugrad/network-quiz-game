@@ -1,0 +1,147 @@
+/* === Genel Arka Plan ve Yazı Tipi === */
+.root {
+    -fx-background-color: #121212;
+    -fx-background-image: url('../image.jpg');
+    -fx-font-family: 'Arial', sans-serif;
+    -fx-text-fill: #ffffff;
+}
+
+/* === Soru Etiketi === */
+#questionLabel {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+}
+
+/* === Skor ve Zamanlayıcı === */
+#timerLabel, #scoreLabel {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #90caf9;
+}
+
+#timerLabel.warning {
+    -fx-text-fill: #ff5252;
+}
+
+#scoreLabel.high-score {
+    -fx-text-fill: #69f0ae;
+}
+
+/* === Joker Etiketi === */
+#jokerLabel {
+    -fx-font-size: 18px;
+    -fx-text-fill: #4dd0e1;
+    -fx-font-style: italic;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+}
+
+#notificationLabel {
+    -fx-text-fill: #4dd0e1;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* === Genel Butonlar === */
+.button {
+    -fx-background-color: linear-gradient(to bottom, #2e2e2e, #1e1e1e);
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 30px;
+    -fx-border-radius: 30px;
+    -fx-border-color: #555555;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 5, 0, 0, 2);
+}
+
+.button:hover {
+    -fx-background-color: #3a3a3a;
+}
+
+.button:pressed {
+    -fx-background-color: #1a1a1a;
+}
+
+/* === Joker Butonları === */
+#btnAudience, #btnFiftyFifty {
+    -fx-background-color: #ef6c00;
+    -fx-text-fill: white;
+    -fx-border-radius: 25px;
+    -fx-pref-width: 200px;
+    -fx-font-size: 16px;
+}
+
+#btnAudience:hover, #btnFiftyFifty:hover {
+    -fx-background-color: #ff8f00;
+}
+
+/* === Yeniden Başlat ve Çıkış Butonları === */
+#btnRestart, #btnExit {
+    -fx-background-color: #009688;
+    -fx-text-fill: white;
+    -fx-pref-width: 200px;
+    -fx-border-radius: 25px;
+    -fx-font-size: 16px;
+}
+
+#btnRestart:hover, #btnExit:hover {
+    -fx-background-color: #26a69a;
+}
+
+/* === VBox ve HBox Düzenleri === */
+.vbox {
+    -fx-background-color: #1e1e1e;
+    -fx-padding: 20px;
+    -fx-spacing: 15px;
+    -fx-border-radius: 15px;
+}
+
+.hbox {
+    -fx-spacing: 10px;
+    -fx-alignment: center;
+}
+
+/* === Audience Chart (BarChart) === */
+#audienceChart {
+    -fx-background-color: transparent;
+    -fx-padding: 10;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-max-height: 200;
+    -fx-max-width: 300;
+}
+
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+
+.chart-legend {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff;
+}
+
+.chart-bar {
+    -fx-bar-fill: #4dd0e1;
+}
+
+.axis .label {
+    -fx-text-fill: #cccccc;
+    -fx-font-size: 12px;
+}
+
+.chart-title {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.axis {
+    -fx-tick-label-fill: #aaaaaa;
+    -fx-tick-length: 5;
+    -fx-tick-mark-visible: true;
+    -fx-minor-tick-visible: false;
+}

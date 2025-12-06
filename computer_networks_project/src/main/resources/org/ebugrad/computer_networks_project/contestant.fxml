@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.BarChart?>
+
+<BorderPane fx:id="borderPane"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.ebugrad.computer_networks_project.ContestantController">
+
+    <top>
+        <HBox alignment="TOP_RIGHT" spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Button fx:id="btnToggleTheme" text="🌙" onAction="#handleToggleTheme"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox fx:id="mainVBox" alignment="CENTER" spacing="20">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <Label fx:id="questionLabel" text="Question will appear here" wrapText="true" maxWidth="800" alignment="CENTER"/>
+
+            <GridPane hgap="20" vgap="20" alignment="CENTER">
+                <Button fx:id="btnA" text="A" onAction="#handleAnswer" GridPane.rowIndex="0" GridPane.columnIndex="0" maxWidth="300"/>
+                <Button fx:id="btnB" text="B" onAction="#handleAnswer" GridPane.rowIndex="0" GridPane.columnIndex="1" maxWidth="300"/>
+                <Button fx:id="btnC" text="C" onAction="#handleAnswer" GridPane.rowIndex="1" GridPane.columnIndex="0" maxWidth="300"/>
+                <Button fx:id="btnD" text="D" onAction="#handleAnswer" GridPane.rowIndex="1" GridPane.columnIndex="1" maxWidth="300"/>
+            </GridPane>
+
+            <HBox spacing="20" alignment="CENTER">
+                <Button fx:id="btnAudience" text="🎯 Ask the Audience" onAction="#handleAudienceJoker"/>
+                <Button fx:id="btnFiftyFifty" text="🌓 50:50" onAction="#handleFiftyFiftyJoker"/>
+            </HBox>
+
+            <Label fx:id="jokerLabel" text="" wrapText="true" maxWidth="700" alignment="CENTER"/>
+
+            <HBox spacing="40" alignment="CENTER">
+                <Label fx:id="timerLabel" text="⏳ Time Left: 30s"/>
+                <Label fx:id="scoreLabel" text="Score: 0"/>
+            </HBox>
+
+            <HBox spacing="20" alignment="CENTER">
+                <Button fx:id="btnRestart" text="🔁 Restart" onAction="#handleRestart"/>
+                <Button fx:id="btnExit" text="🚪 Exit" onAction="#handleExit"/>
+            </HBox>
+
+            <Label fx:id="notificationLabel" text="" visible="false" />
+
+            <BarChart fx:id="audienceChart" title="Audience Poll"
+                      categoryGap="10" barGap="3"
+                      prefWidth="300" prefHeight="200"
+                      animated="false" legendVisible="false"
+                      visible="false">
+                <xAxis>
+                    <CategoryAxis label="Options" />
+                </xAxis>
+                <yAxis>
+                    <NumberAxis label="Percentage (%)" upperBound="100" tickUnit="20" />
+                </yAxis>
+            </BarChart>
+
+        </VBox>
+    </center>
+</BorderPane>

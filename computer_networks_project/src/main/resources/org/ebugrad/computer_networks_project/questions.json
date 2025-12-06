@@ -1,0 +1,27 @@
+[
+  {
+    "question": "In which year was Python developed?",
+    "choices": ["1991", "2000", "1989", "2010"],
+    "correct": "A"
+  },
+  {
+    "question": "Which company released Java?",
+    "choices": ["Sun", "IBM", "Microsoft", "Apple"],
+    "correct": "A"
+  },
+  {
+    "question": "How many layers are in the TCP/IP model?",
+    "choices": ["5", "4", "3", "7"],
+    "correct": "B"
+  },
+  {
+    "question": "What is the kernel of Linux?",
+    "choices": ["Shell", "KDE", "GNOME", "Kernel"],
+    "correct": "D"
+  },
+  {
+    "question": "What does RAM stand for?",
+    "choices": ["Read And Modify", "Random Access Memory", "Run Access Mode", "Real Active Memory"],
+    "correct": "B"
+  }
+]
