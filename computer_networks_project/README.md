@@ -30,13 +30,6 @@ This project simulates a **distributed game environment** where a client applica
 
 The system follows a modular design with three distinct components communicating over TCP/IP.
 
-```mermaid
-graph TD;
-    Client[Contestant App (GUI)] -->|Port 4337| GameServer[Game Server Logic];
-    Client -->|Port 4338| JokerServer[Joker Server Logic];
-    GameServer -.->|Validates Answer| JSON[Questions.json];
-    JokerServer -.->|Calculates Probability| Logic[Algorithms];
-```
 
 * **Game Server (Port 4337):** Manages the game flow, questions, and scoring.
 * **Joker Server (Port 4338):** Handles "50:50" and "Ask the Audience" requests.
